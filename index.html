@@ -1,16 +1,21 @@
 <html>
   <head>
     <title>Google</title>
+    <link rel="icon" type="image/svg+xml" href="https://google.com/favicon.ico">
   </head>
   <body>
     <h1>Cool unblocking site</h1>
     <br><br>
-    <p>Pease turn on popups to get the unblocking site</p>
+    <p>Pease turn on popups and press the button below to get the unblocking site</p>
+    <br>
+    <br>
+    <button onclick="press()"></button>
     <script>
-      window.onload(
+      function press() {
+      while (true) {
         window.open('https://cznull.github.io/vsbm', '_blank', 'width=800,height=800')
         sleep(10)
-      )
+      } }
     </script>
   </body>
 </html>
