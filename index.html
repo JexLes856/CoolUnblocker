@@ -1,36 +1,71 @@
 <html>
-  <head>
+
+<head>
     <title>Google</title>
     <link rel="icon" type="image/svg+xml" href="https://google.com/favicon.ico">
-  </head>
-  <body>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            margin-top: 25;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0 200;
+            margin-top: 40;
+        }
+
+        li {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
     <h1>Cool unblocking site</h1>
     <br>
     <br>
-    <em>Please enable pop-ups and press the button below to be able to use the cool unblocker (It opens in about:blank so it's undetectable)</em>
+    <em>Please enable pop-ups and press the button below to be able to use the cool unblocker (It opens in about:blank
+        so it's undetectable)</em>
     <em>This link is fake to cover the unblocker</em>
-    <br>
-    <br>
-    <br>
-    <br>
-    <button onclick="site()">Unblocker</button>
-    <br>
-    <br>
-    <br>
-    <button onclick="site2()">Unblocker 2</button>
-    <br>
-    <p>(Button two is if site one fails)</p>
+    <ul>
+        <li>
+            <button onclick="site()">Unblocker</button>
+        </li>
+        <li>
+            <button onclick="site2()">Unblocker 2</button>
+            <br>
+            <p>(Button two is if site one fails)</p>
+        </li>
+    </ul>
     <script>
         function site() {
-            while(true) {
-                window.open("https://cznull.github.io/vsbm", "_blank", "toolbar=no, scrollbars=no, resizable=no, width=400, height=400");
+            while (true) {
+                window.open(
+                    "https://cznull.github.io/vsbm",
+                    "_blank",
+                    "toolbar=no, scrollbars=no, resizable=no, width=400, height=400"
+                );
             };
         };
         function site2() {
-            while(true) {
-                window.open("https://jexles856.github.io/CoolUnbocker", "_blank", "toolbar=no, scrollbars=no, resizable=no, width=400, height=400");
+            while (true) {
+                window.open(
+                    "https://jexles856.github.io/CoolUnbocker",
+                    "_blank",
+                    "toolbar=no, scrollbars=no, resizable=no, width=400, height=400"
+                );
             };
         };
     </script>
-  </body>
+</body>
+
 </html>
